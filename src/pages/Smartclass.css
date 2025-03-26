@@ -1,0 +1,173 @@
+/* Background Video Styling */
+.enhanced-background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Keep video behind the content */
+  }
+
+  /* Main Container */
+  .enhanced-scheduling-container {
+    position: relative;
+    width: 100vw;
+    height: 110vh;
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+    color: #ffffff;
+    padding-top: 100px;
+  }
+  
+  /* Content Overlay */
+  .enhanced-content-overlay {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    position: absolute;
+    z-index: 1; /* Place the content above the video */
+    text-align: center;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Heading Styling */
+  .enhanced-content-overlay h2 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-shadow: 0 0 20px #00ffc6, 0 0 30px #010506; /* Glowing effect */
+    animation: text-glow 3s infinite alternate;
+  }
+  
+  @keyframes text-glow {
+    0% {
+      text-shadow: 0 0 20px #00ffc6, 0 0 30px #00bfff;
+    }
+    100% {
+      text-shadow: 0 0 30px #00ffc6, 0 0 40px #00bfff;
+    }
+  }
+  
+  /* Form Styling */
+  .enhanced-scheduling-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  /* Form Groups */
+  .enhanced-form-group label {
+    display: flex;
+    margin: 10px;
+    width: 100%;
+    justify-content: center;
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .enhanced-form-group input {
+    width: 80%;
+    padding: 15px;
+    font-size: 1.1em;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .enhanced-form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .enhanced-form-group input:focus {
+    outline: none;
+    border: 1px solid #003cff;
+    box-shadow: 0 0 20px #00ffc6, 0 0 30px #00bfff;
+  }
+  
+  /* Button Styling */
+  .enhanced-generate-button {
+    background: linear-gradient(90deg, #00ffc6, #00bfff); /* Neon gradient */
+    border: none;
+    color: #ffffff;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 15px 40px;
+    border-radius: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .enhanced-generate-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 25px #00ffc6;
+  }
+  
+  /* Schedule Display */
+  .enhanced-schedule-display {
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 1.5em;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease; /* Ensure smooth size changes */
+    width: auto;
+    min-width: 300px;
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .enhanced-content-overlay h2 {
+      font-size: 2.5em;
+    }
+  
+    .enhanced-scheduling-form {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .enhanced-form-group input {
+      font-size: 1em;
+      padding: 12px;
+    }
+  
+    .enhanced-generate-button {
+      font-size: 1em;
+      padding: 12px 30px;
+    }
+  
+    .enhanced-schedule-display {
+      font-size: 1.2em;
+    }
+  }
+  

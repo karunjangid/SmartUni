@@ -1,0 +1,186 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+
+  /* Feedback Form styles */
+  .feedback-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+  }
+  
+  .feedback-form h2 {
+    margin: 0 0 15px;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .feedback-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .feedback-form input,
+  .feedback-form textarea,
+  .feedback-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+  }
+  
+  .feedback-form textarea {
+    resize: vertical;
+  }
+  
+  .feedback-form button {
+    background: #4e54c8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .feedback-form button:hover {
+    background: #8f94fb;
+  }
+  
+  /* Video Section */
+  .hero-video {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .hero-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+  }
+  
+  .hero-video .content {
+    position: relative;
+    color: white;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  /* Page title */
+.page-title {
+    text-align: center;
+    font-size: 2em;
+    margin: 20px 0;
+    color: #4e54c8;
+  }
+  
+  /* Features grid */
+  .student-management-container {
+    padding: 20px;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 10px;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #4e54c8;
+  }
+  
+  .card p {
+    font-size: 0.9em;
+    color: #555;
+  }
+/* Page title */
+.page-title {
+  text-align: center;
+  font-size: 2em;
+  margin: 20px 0;
+  color: #4e54c8;
+}
+
+/* Features grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+  color: #4e54c8;
+}
+
+.card p {
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Container padding */
+.student-management-container,
+.faculty-management-container,
+.exam-management-container {
+  padding: 20px;
+}
+  

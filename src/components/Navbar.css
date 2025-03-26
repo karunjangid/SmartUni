@@ -1,0 +1,94 @@
+/* General Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 50px;
+  background: linear-gradient(90deg, rgba(2, 0, 69, 0.9), rgba(20, 20, 50, 0.8));
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+.logo{
+  display: flex;
+}
+.logo img{
+  width: 60px;
+  height: 60px;
+  padding: 13px;
+}
+.logo h1 {
+  font-size: 1.8em;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00e6e6;
+  }
+  100% {
+    text-shadow: 0 0 20px #00ffcc, 0 0 30px #00e6e6;
+  }
+}
+
+/* Navbar Links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+.nav-links a:hover {
+  color: #00ffc6; /* Highlight on hover */
+  text-shadow: 0 0 15px #00ffc6, 0 0 25px #00d9ff; /* Glowing effect */
+}
+
+/* Futuristic Underline Effect */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #00ffc6, #00d9ff);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%; /* Full underline on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .logo h1 {
+    font-size: 1.5em;
+  }
+}

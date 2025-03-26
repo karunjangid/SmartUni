@@ -1,0 +1,136 @@
+/* Background Video Styling */
+.advanced-options-container {
+    position: relative;
+    width: 100vw;
+    height: 130vh;
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+    color: #ffffff;
+    padding-top: 100px;
+  }
+  .features-grid a {
+    text-decoration: none;
+  }
+  
+  .features-grid a:hover {
+    text-decoration: none;
+  }
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Place the video behind the content */
+  }
+  
+  /* Content Overlay */
+  .content-overlay {
+    position: relative;
+    z-index: 1; /* Place the content above the video */
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Header */
+  .content-overlay h2 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-decoration: none;
+
+  }
+  
+  /* Features Grid */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three cards per row */
+    gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 80%;
+  }
+  
+  /* Card Styling */
+  .card {
+    background: rgba(255, 255, 255, 0.15); /* Glassmorphism style */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card h3 {
+    font-size: 1.5em;
+    color: #ffffff;
+    margin: 10px 0 0;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 255, 200, 0.1));
+    animation: rotate-gradient 6s linear infinite;
+    z-index: 0;
+  }
+  
+  .card:hover::before {
+    animation: rotate-gradient 3s linear infinite;
+  }
+  
+  .card:hover h3 {
+    color: #0e003f;
+  }
+  
+  @keyframes rotate-gradient {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Card Icons */
+  .card-icon {
+    font-size: 3em;
+    color: #0e003f; /* Icon glow */
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr); /* Two cards per row for medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .features-grid {
+      grid-template-columns: 1fr; /* One card per row for small screens */
+    }
+  
+    .content-overlay h2 {
+      font-size: 2em;
+    }
+  
+    .card h3 {
+      font-size: 1.2em;
+    }
+  }
+  

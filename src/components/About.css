@@ -1,0 +1,96 @@
+/* General Section Styles */
+.about-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #020024, #090979, #00d4ff); /* Glowing gradient background */
+    background-size: 300% 300%;
+    animation: gradient-animation 10s ease infinite;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  @keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Header Styling */
+  .about-header h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .about-header p {
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    margin-bottom: 50px;
+  }
+  
+  /* Features Container */
+  .about-features {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap; /* Ensures responsive behavior */
+  }
+  
+  /* Feature Item Styling */
+  .about-feature {
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    width: 300px; /* Fixed width for cards */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .about-feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 20px #00ffcc;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .about-feature h3 {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .about-feature p {
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Feature Icons */
+  .feature-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 15px #00ffcc);
+    transition: transform 0.3s ease;
+  }
+  
+  .about-feature:hover .feature-icon {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 20px #00bfff);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-header h1 {
+      font-size: 2.5em;
+    }
+  
+    .about-header p {
+      font-size: 1.2em;
+    }
+  
+    .about-feature {
+      width: 80%;
+    }
+  }
+  
